@@ -57,7 +57,9 @@ class Shortener:
         cls.put_data('S8L_TO_URL', item)
         cls.put_data('URL_TO_S8L', item)
         img = qrcode.make(f'{os.getenv("BASE_URL")}/{shorten}')
+        print(f'{os.getenv("BASE_URL")}/{shorten}')
         img.save(f'{shorten}.png')
+        print()
         return 'Success'
 
 if __name__ == '__main__':
